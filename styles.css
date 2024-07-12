@@ -69,3 +69,8 @@ thead {
     background-color: #1f2f4a;
     color: #ffffff;
 }
+
+.event-text {
+    font-size: 40px;
+    color:#f70707
+}
