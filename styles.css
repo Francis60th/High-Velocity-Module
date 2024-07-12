@@ -71,6 +71,16 @@ thead {
 }
 
 .event-text {
+    background-color: rgb(54, 65, 126);
+    color: rgb(255, 5, 5);
+    border: none;
+    padding: 10px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 25px;
-    color:#f70707
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Arial', Verdana, Geneva, Tahoma, sans-serif;
 }
