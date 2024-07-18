@@ -10,6 +10,7 @@ body {
 
 .custom-header {
     color: #5c7fb1;
+    font-size: 70px;
 }
 
 header {
@@ -19,12 +20,12 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 250;
 }
 
 .container {
     width: 90%;
-    margin: 300px auto 2.5%;
+    margin: 120px auto 2.5%;
     padding: 2.5%;
     font-size: 30px;
 }
