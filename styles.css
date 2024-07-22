@@ -55,6 +55,15 @@ body {
     cursor: pointer;
 }
 
+.desktop-menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.desktop-menu li {
+    margin-left: 20px;
+}
+
 /* Media query for mobile menu */
 @media (max-width: 768px) {
     .nav {
@@ -87,5 +96,9 @@ body {
 
     .menu li {
         margin-bottom: 8px;
+    }
+
+    .desktop-menu {
+        display: none;
     }
 }
