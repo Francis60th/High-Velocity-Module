@@ -1,0 +1,91 @@
+/* Reset some default styles for body and header */
+body, header, nav, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9; /* light navy blue background */
+    color: #333; /* default text color */
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #1a2151; /* navy blue header */
+    color: #fff; /* text color for header */
+    padding: 10px 0;
+}
+
+.header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Media query for mobile menu */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        order: -1;
+    }
+
+    .menu-icon:hover {
+        color: #ccc;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked + .menu {
+        display: block;
+    }
+
+    .menu li {
+        margin-bottom: 8px;
+    }
+}
