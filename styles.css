@@ -1,104 +1,55 @@
-/* Reset some default styles for body and header */
-body, header, nav, ul, li, a {
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f5f9; /* light navy blue background */
-    color: #333; /* default text color */
+/* Basic styling for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
-.container {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.header {
-    background-color: #1a2151; /* navy blue header */
-    color: #fff; /* text color for header */
-    padding: 10px 0;
-}
-
-.header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    display: none;
-    list-style-type: none;
-}
-
-.menu li {
+header h1 {
     margin-bottom: 10px;
 }
 
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
+/* Navigation styles */
+nav {
+    margin-top: 10px;
 }
 
-.menu-icon {
-    font-size: 1.5em;
-    cursor: pointer;
+/* Dropdown menu styling */
+#dropdown {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /* Example of limiting width for mobile */
 }
 
-.desktop-menu {
-    display: flex;
-    list-style-type: none;
+/* Main content section */
+main {
+    padding: 20px;
 }
 
-.desktop-menu li {
-    margin-left: 20px;
+#content {
+    margin-top: 20px;
 }
 
-/* Media query for mobile menu */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
+/* Responsive adjustments */
+@media only screen and (min-width: 600px) {
+    /* Adjustments for screens wider than 600px */
+    main {
         display: flex;
-        flex-direction: column;
-        margin-top: 10px;
+        justify-content: center;
     }
 
-    .menu-icon {
-        display: block;
-        order: -1;
-    }
-
-    .menu-icon:hover {
-        color: #ccc;
-    }
-
-    #menu-toggle {
-        display: none;
-    }
-
-    #menu-toggle:checked + .menu {
-        display: block;
-    }
-
-    .menu li {
-        margin-bottom: 8px;
-    }
-
-    .desktop-menu {
-        display: none;
+    #content {
+        width: 50%;
     }
 }
