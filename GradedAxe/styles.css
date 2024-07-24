@@ -27,8 +27,6 @@ header {
 .logo {
     max-width: 190px;
     position: absolute;
-  /*  left: 10%;
-      right: 10%;*/
     top: 45%;
     transform: translateY(-50%);
 }
@@ -54,7 +52,6 @@ header h1 {
 
 /* Banner image styles */
 .banner-image {
-    max-height: 90px;
     width: auto;
     padding: 1px;
 }
@@ -107,7 +104,6 @@ main {
 #content {
     margin-top: 20px;
     text-align: center;
-
 }
 
 /* Media query for smaller screens */
@@ -145,5 +141,10 @@ main {
 
     #dropdown {
         max-width: 100%;
+    }
+
+    /* Set max-height for banner-image on mobile */
+    .banner-image {
+        max-height: 90px;
     }
 }
