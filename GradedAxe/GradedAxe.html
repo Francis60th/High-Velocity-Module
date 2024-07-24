@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile and Desktop Optimized Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -14,13 +15,13 @@
         <div class="header-text">
             <h1><img src="images/GradedBanner.png" alt="Banner" class="banner-image"></h1>
             <nav>
-                <select id="dropdown">
+                <select id="dropdown" onchange="redirectToUrl(this)">
                     <option value="">Start Here</option>
-                    <option value="option1">Garlic Bread</option>
-                    <option value="option2">Wasimian Tatics</option>
-                    <option value="option3">Lean Recipe</option>
-                    <option value="option4">Philly</option>
-                    <option value="option5">Ni**a</option>
+                    <option value="https://www.budgetbytes.com/wp-content/uploads/2023/08/Garlic-Bread-close.jpg">Garlic Bread</option>
+                    <option value="https://en.wikipedia.org/wiki/North_African_campaign">Wasimian Tatics</option>
+                    <option value="https://www.sandstonecare.com/blog/what-is-lean-drug/#:~:text=How%20To%20Make%20Lean%3F,%2C%20sometimes%2C%20life%2Dthreatening.">Lean Recipe</option>
+                    <option value="https://www.phillypolice.com/crimestats/">Philly</option>
+                    <option value="https://pbs.twimg.com/media/Fy9X_H0agAEmfTf.jpg">Ni**a</option>
                 </select>
             </nav>
         </div>
