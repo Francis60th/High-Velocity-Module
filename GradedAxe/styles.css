@@ -54,7 +54,7 @@ header h1 {
 
 /* Banner image styles */
 .banner-image {
-    max-height: 170px;
+    max-height: 90px;
     width: auto;
     padding: 1px;
 }
