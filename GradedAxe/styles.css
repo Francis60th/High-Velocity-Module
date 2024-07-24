@@ -1,15 +1,21 @@
+/* Set body background color */
+body {
+    background-color: #adb3c8; /* Replace with your desired background color */
+}
+
 /* Reset styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif; /* Palatino font family */
 }
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: #000620;
+    color: #fffcdf;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,13 +53,13 @@ header h1 {
 
 /* Navigation styles */
 nav {
-    margin-top: 10px;
+    margin-top: 50px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Dropdown menu styles */
+/* Dropdown menu button styles */
 #dropdown {
     padding: 8px;
     font-size: 16px;
@@ -61,6 +67,27 @@ nav {
     border-radius: 5px;
     max-width: 200px;
     width: 100%;
+    background-color: #fffcdf; /* Background color */
+    color: #333; /* Text color */
+    position: relative;
+    appearance: none; /* Remove default styling */
+}
+
+/* Dropdown arrow icon */
+#dropdown::after {
+    content: '\25BE'; /* Unicode character for downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures dropdown arrow does not interfere with clicking */
+}
+
+/* Adjust appearance on hover/focus */
+#dropdown:hover,
+#dropdown:focus {
+    border-color: #66afe9; /* Example color change on hover/focus */
+    outline: none; /* Remove default focus outline */
 }
 
 /* Main content styles */
@@ -72,6 +99,7 @@ main {
 #content {
     margin-top: 20px;
     text-align: center;
+
 }
 
 /* Media query for smaller screens */
@@ -86,6 +114,10 @@ main {
         position: relative;
         transform: none;
         margin-bottom: 10px;
+    }
+
+    .logo img {
+        max-width: 60px; /* Adjust the size as per your preference */
     }
 
     .header-text {
