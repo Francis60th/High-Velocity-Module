@@ -27,7 +27,7 @@ header {
 .logo {
     max-width: 150px;
     position: absolute;
-    left: 10px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -112,12 +112,14 @@ main {
     .logo {
         max-width: 80px;
         position: relative;
+        left: auto;
         transform: none;
         margin-bottom: 10px;
     }
 
     .logo img {
-        max-width: 60px; /* Adjust the size as per your preference */
+        max-width: 100%; /* Ensure the image takes full width of its container */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .header-text {
