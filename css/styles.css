@@ -1,95 +1,84 @@
-/* styles.css */
-
-body {
-    background-color: #5c7fb1;
-    color: #ffffff;
-    text-align: center;
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
 }
 
-.custom-header {
-    color: #5c7fb1;
-    font-size: 70px;
-}
- 
+/* Basic styling for the header */
 header {
-    background-color: #1f2f4a;
-    text-align: center;
-    font-size: 50px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 250;
-}
-
-.container {
-    width: 90%;
-    margin: 120px auto 2.5%;
-    padding: 2.5%;
-    font-size: 30px;
-    text-align: center; /* Center align content */
-}
-
-.button-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
 }
 
-.button-container button {
-    background-color: rgb(54, 65, 126);
-    color: white;
-    border: none;
-    padding: 10px 80px;
+.logo {
+    max-width: 150px; /* Adjust as needed */
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-text {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
+    flex-grow: 1;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav {
     margin-top: 10px;
-    cursor: pointer;
+}
+
+/* Dropdown menu styling */
+#dropdown {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Arial', Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.button-container button:hover {
-    background-color: #4d78b4;
-}
-
-table {
     width: 100%;
-    border-collapse: collapse;
+    max-width: 200px; /* Example of limiting width for desktop */
+}
+
+/* Main content section */
+main {
+    padding: 20px;
+}
+
+#content {
     margin-top: 20px;
 }
 
-table, th, td {
-    border: 1px solid #ffffff;
-    padding: 10px;
-    text-align: center;
-}
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    /* Adjustments for screens up to 600px width (mobile) */
+    .logo {
+        text-align: center;
+    }
 
-thead {
-    background-color: #1f2f4a;
-    color: #ffffff;
-}
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.event-text, .event-alert-text {
-    background-color: rgb(54, 65, 126);
-    color: #5c7fb1;
-    border: none;
-    padding: 10px 80px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Arial', Verdana, Geneva, Tahoma, sans-serif;
-}
+    .header-text {
+        text-align: center;
+    }
 
-.container img {
-    max-width: 60%; /* Reduce image size by 60% */
-    display: block; /* Ensure image is centered */
-    margin: 20px auto; /* Center align image horizontally with some margin */
+    header h1 {
+        margin-top: 20px;
+    }
+
+    #dropdown {
+        max-width: 100%;
+    }
 }
