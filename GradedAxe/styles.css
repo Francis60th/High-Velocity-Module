@@ -106,7 +106,30 @@ main {
 /* Content section styles */
 #content {
     margin-top: 20px;
+    margin-bottom: 60px;
     text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 10px; /* Adjust gap between items */
+}
+
+.grid-item {
+    overflow: hidden; /* Ensures image doesn't overflow grid-item */
+    position: relative; /* Allows absolute positioning of image */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.grid-item img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Scale item on hover */
 }
 
 /* Media query for smaller screens */
