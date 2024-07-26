@@ -163,6 +163,7 @@ main {
     max-height: 700px; /* Maximum height of the image */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add this line to round the edges */
 }
 
 /* Media query for smaller screens */
@@ -217,6 +218,7 @@ main {
         width: 80%; /* Adjust image width for mobile */
         margin: 0 auto; /* Center the image if smaller than its container */
         display: block; /* Ensure the image is displayed as a block element */
+        border-radius: 8px; /* Add this line to round the edges */
     }
 
     /* Adjust back button position and size for mobile screens */
