@@ -113,6 +113,45 @@ main {
     text-align: center;
 }
 
+/* FAQ section styles */
+.faq {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffcdf; /* Background color for FAQ section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit width of FAQ section */
+}
+
+.faq ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq li {
+    margin-bottom: 20px;
+}
+
+.faq p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Align text to the left */
+}
+
+.faq strong {
+    display: block;
+    text-align: left; /* Align strong text to the left */
+}
+
+.faq a {
+    color: #0066cc; /* Link color */
+    text-decoration: none;
+}
+
+.faq a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
 /* Grid container styles for all devices */
 .grid-container {
     display: grid;
@@ -184,5 +223,15 @@ main {
     /* Ensure grid layout is visible on mobile */
     .grid-container {
         display: grid;
+    }
+
+    /* Adjust FAQ section styles for smaller screens */
+    .faq {
+        padding: 15px;
+        background-color: #ffffff;
+    }
+
+    .faq p {
+        font-size: 16px;
     }
 }
