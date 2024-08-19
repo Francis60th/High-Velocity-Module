@@ -1,0 +1,47 @@
+// ==UserScript==
+// @name         Remove Specific Rows from Table
+// @namespace    http://tampermonkey.net/
+// @version      0.2
+// @description  Remove rows from a specific table containing specific text
+// @match        https://ufl.teamdynamix.com/*
+// @grant        none
+// ==/UserScript==
+ 
+(function() {
+    'use strict';
+ 
+    console.log('Script started');
+ 
+    function removeRows() {
+        console.log('Removing rows');
+        var table = document.getElementById('table4');
+ 
+        if (table) {
+            var rows = table.querySelectorAll('tr');
+            rows.forEach(function(row) {
+                if (row.textContent.includes('UFIT AT Charged Printing')) {
+                    row.remove();
+                    console.log('Removed row');
+                }
+            });
+        } else {
+            console.log('Table not found');
+        }
+    }
+ 
+    // Use MutationObserver to handle dynamic content
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            removeRows();
+        });
+    });
+ 
+    // Observe the entire document
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+ 
+    // Run once on page load
+    window.addEventListener('load', removeRows);
+})();
